@@ -1,0 +1,14 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "my first electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Aldrin Caballero",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.2.0"
+  }
+}
