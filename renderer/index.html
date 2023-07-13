@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; style-src 'self'">
     <title>Music Player | Aldrin Caballero</title>
     <link href="./dist/output.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
   </head>
-  <body>
+  <body class="bg-white dark:bg-slate-800">
+    
     <div
       class="bg-white border-slate-100 dark:bg-slate-800 dark:border-slate-500 border-b p-4 pb-6 sm:p-10 sm:pb-8 lg:p-6 xl:p-10 xl:pb-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8"
     >
@@ -68,7 +71,7 @@
       class="bg-slate-50 text-slate-500 dark:bg-slate-600 dark:text-slate-200 flex items-center"
     >
       <div class="flex-auto flex items-center justify-evenly">
-        <button type="button" aria-label="Add to favorites">
+        <button type="button" aria-label="Add to favorites" id="addfave">
           <svg width="24" height="24">
             <path
               d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z"

@@ -4,7 +4,8 @@
   "description": "my first electron app",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "watch": "npx electronmon ."
   },
   "author": "Aldrin Caballero",
   "license": "MIT",

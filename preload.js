@@ -1,14 +1,12 @@
-// preload.js
+const { ipcRenderer } = require("electron");
 
-// All the Node.js APIs are available in the preload process.
-// It has the same sandbox as a Chrome extension.
 window.addEventListener("DOMContentLoaded", () => {
-  const replaceText = (selector, text) => {
-    const element = document.getElementById(selector);
-    if (element) element.innerText = text;
-  };
-
-  for (const dependency of ["chrome", "node", "electron"]) {
-    replaceText(`${dependency}-version`, process.versions[dependency]);
+  // get mp3 files
+  if(confirm('This will search all mp3 files in your folder\nDo you want to continue?')) {
+    ipcRenderer.send("open-directory-dialog");
   }
+});
+
+ipcRenderer.on("selected-directory", (event, directoryPath) => {
+  ipcRenderer.send("process-files", directoryPath);
 });
